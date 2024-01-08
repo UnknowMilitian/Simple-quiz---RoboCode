@@ -11,13 +11,6 @@ function startTimer(duration) {
 
     if (countdownValue < 0) {
       clearInterval(interval);
-      if (currentCardIndex < cards.length - 1) {
-        currentCardIndex++;
-        showCard(currentCardIndex);
-        updateButtons();
-      } else {
-        countdownElement.textContent = "Test completed";
-      }
     } else {
       countdownElement.textContent = countdownValue;
 
