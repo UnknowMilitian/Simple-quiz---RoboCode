@@ -1,0 +1,16 @@
+:root {
+  --purple: #a25afe;
+  --green: #b6ff58;
+  --dark-text: #283851;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--dark-text);
+}
+
+body {
+  background-color: var(--purple);
+}
