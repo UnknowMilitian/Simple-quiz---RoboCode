@@ -11,7 +11,7 @@
     <title>Quiz page - Robocode</title>
   </head>
   <body>
-    <div class="logo mt-[7vh] sm:my-[10vh] mb-[3rem]">
+    <div class="logo mt-[4vh] md:mt-[7vh] sm:my-[10vh] mb-[2rem] md:mb-[3rem]">
       <img
         class="mx-auto cursor-pointer"
         src="/assets/images/logo.svg"
@@ -19,38 +19,79 @@
       />
     </div>
 
-    <div class="content w-[95%] mx-auto">
+    <div class="content w-[95%] sm:w-[75%] lg:w-[45%] mx-auto">
       <div class="quiz-cards">
         <form action="">
-          <div class="info flex justify-between items-center">
-            <h1 class="pagination_number text-white">1/10</h1>
-            <!-- <div id="time">
-              <div class="circle" style="--clr: white">
-                <svg>
-                  <circle cx="20" cy="20" r="20" id="ss"></circle>
+          <div class="quiz">
+            <div class="info flex justify-between items-center">
+              <h1 class="pagination_number text-white">1/10</h1>
+              <div id="timer" class="timer-container">
+                <div id="countdown" class="countdown"></div>
+                <svg
+                  class="border-svg"
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 100 100"
+                >
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="5"
+                  />
                 </svg>
-                <div id="ss">10</div>
               </div>
-            </div> -->
-
-            <div id="timer" class="timer-container">
-              <div id="countdown" class="countdown"></div>
-              <svg
-                class="border-svg"
-                width="100%"
-                height="100%"
-                viewBox="0 0 100 100"
-              >
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="5"
-                />
-              </svg>
             </div>
+            <div class="quiz-content">
+              <h1
+                class="font-[600] text-[1.5rem] text-lime-300 tracking-wide my-[1rem]"
+              >
+                HTML razshiflovkasi
+              </h1>
+              <div
+                class="quiz-buttons grid grid-cols-1 md:grid-cols-2 gap-x-[1.5rem] gap-y-[1rem] items-center"
+              >
+                <div class="quiz-buttons__item">
+                  <button
+                    class="py-[1rem] px-[0.7rem] bg-violet-300 font-[600] text-[1.3rem] rounded-lg cursor-pointer"
+                  >
+                    Hyper Text Markup Language
+                  </button>
+                  <input type="radio" name="radio" class="hidden" />
+                </div>
+                <div class="quiz-buttons__item">
+                  <button
+                    class="py-[1rem] px-[0.7rem] bg-violet-300 font-[600] text-[1.3rem] rounded-lg cursor-pointer"
+                  >
+                    Hyper Text Markup Language
+                  </button>
+                  <input type="radio" name="radio" class="hidden" />
+                </div>
+                <div class="quiz-buttons__item">
+                  <button
+                    class="py-[1rem] px-[0.7rem] bg-violet-300 font-[600] text-[1.3rem] rounded-lg cursor-pointer"
+                  >
+                    Hyper Text Markup Language
+                  </button>
+                  <input type="radio" name="radio" class="hidden" />
+                </div>
+                <div class="quiz-buttons__item">
+                  <button
+                    class="py-[1rem] px-[0.7rem] bg-violet-300 font-[600] text-[1.3rem] rounded-lg cursor-pointer"
+                  >
+                    Hyper Text Markup Language
+                  </button>
+                  <input type="radio" name="radio" class="hidden" />
+                </div>
+              </div>
+            </div>
+            <button
+              class="block mx-auto w-[100%] md:w-auto mt-[2rem] mb-[1rem] font-[600] px-[3rem] py-[0.5rem] text-[1.2rem] text-white bg-lime-400 rounded-md hover:bg-lime-500 transition ease-in-out delay-50"
+            >
+              Next
+            </button>
           </div>
         </form>
       </div>

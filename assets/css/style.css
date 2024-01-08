@@ -15,50 +15,18 @@ body {
   background-image: url(/assets/images/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 93dvh;
+  min-height: 100dvh;
 }
 
 .quiz-cards {
   background: rgba(162, 90, 254, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(162, 90, 254, 0.24);
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
-
-/* #time {
-  display: flex;
-  gap: 30px;
-}
-
-#time .circle {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-}
-
-#time .circle::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 10px solid #1b1a1c;
-  border-radius: 50%;
-}
-
-#time .circle::after {
-  content: "";
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  background: ;
-} */
 
 .timer-container {
   width: 45px;
@@ -87,4 +55,22 @@ body {
   transition: stroke-dashoffset 0.5s ease-in-out;
   stroke-dasharray: 283;
   stroke-dashoffset: 0;
+}
+
+/* Style the label and hide the radio input */
+.quiz-buttons .quiz-buttons__item input[type="radio"] {
+  display: none;
+}
+
+/* When input is checked, style the adjacent span (label) */
+.quiz-buttons .quiz-buttons__item input[type="radio"]:checked + span {
+  background-color: #84cc16;
+  /* Add any additional styles for the checked state */
+}
+
+/* Hover and Focus styles */
+.quiz-buttons .quiz-buttons__item button:hover,
+.quiz-buttons .quiz-buttons__item button:focus {
+  background-color: #84cc16;
+  /* Add any additional hover or focus styles */
 }

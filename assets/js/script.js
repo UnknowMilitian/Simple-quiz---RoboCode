@@ -31,3 +31,26 @@ function startTimer(duration) {
 
 // Call startTimer function as needed
 startTimer(timerDuration); // To start the countdown
+
+//////////
+const buttons = document.querySelectorAll(".quiz-buttons__item button");
+const radios = document.querySelectorAll(
+  '.quiz-buttons__item input[type="radio"]'
+);
+
+buttons.forEach((button, index) => {
+  // Event listener for button click
+  button.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent the default action (page refresh)
+
+    radios[index].checked = true; // Toggle the corresponding radio button
+
+    // Reset button styles for all buttons
+    buttons.forEach((btn) => {
+      btn.style.backgroundColor = "#c4b5fd"; // Reset button color
+    });
+
+    // Change the style of the clicked button
+    button.style.backgroundColor = "#84cc16";
+  });
+});
