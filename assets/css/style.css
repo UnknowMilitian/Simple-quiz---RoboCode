@@ -12,5 +12,79 @@
 }
 
 body {
-  background-color: var(--purple);
+  background-image: url(/assets/images/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 93dvh;
+}
+
+.quiz-cards {
+  background: rgba(162, 90, 254, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(162, 90, 254, 0.24);
+  padding: 1rem;
+}
+
+/* #time {
+  display: flex;
+  gap: 30px;
+}
+
+#time .circle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+#time .circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 10px solid #1b1a1c;
+  border-radius: 50%;
+}
+
+#time .circle::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: ;
+} */
+
+.timer-container {
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  color: white;
+  z-index: 1;
+}
+
+.border-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.border-svg circle {
+  transition: stroke-dashoffset 0.5s ease-in-out;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 0;
 }
