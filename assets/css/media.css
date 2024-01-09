@@ -1,0 +1,5 @@
+@media only screen and (max-width: 640px) {
+  body {
+    min-height: 96vh;
+  }
+}

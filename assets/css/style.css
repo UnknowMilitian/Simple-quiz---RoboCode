@@ -15,11 +15,14 @@ body {
   background-image: url(/assets/images/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100dvh;
+  min-height: 93vh;
+  padding-bottom: 2rem;
+  width: 100%;
 }
 
 .quiz-cards,
-.result-cards {
+.result-cards,
+.login-cards {
   background: rgba(162, 90, 254, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -27,6 +30,20 @@ body {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(162, 90, 254, 0.24);
   padding: 1rem 1.5rem;
+}
+
+.result-cards::-webkit-scrollbar {
+  width: 12px;
+}
+
+.result-cards::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px var(--green);
+  border-radius: 5px;
+}
+
+.result-cards::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 3px var(--green);
 }
 
 .timer-container {
