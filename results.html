@@ -1,11 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/media.css" />
+
+    <title>Results Page - Robocode</title>
+  </head>
+  <body>
+    <div class="logo mt-[4vh] md:mt-[7vh] sm:my-[10vh] mb-[2rem] md:mb-[3rem]">
+      <img
+        class="mx-auto cursor-pointer"
+        src="/assets/images/logo.svg"
+        alt=""
+      />
+    </div>
+
+    <div class="content w-[95%] sm:w-[75%] lg:w-[45%] mx-auto">
+      <div class="result-cards flex flex-col gap-[1rem]">
+        <div
+          class="result-card flex justify-between items-center bg-violet-300 p-5 rounded-lg"
+        >
+          <div class="text-result__content cursor-pointer">
+            <h1 class="result-card__tile uppercase text-[1.3rem] font-[700]">
+              back-end
+            </h1>
+            <p class="mt-[0.5rem] text-[1.2rem] tracking-tight">
+              Algoritmlar, muammolarga yechim topish, intizom
+            </p>
+          </div>
+          <div class="circle-percent">
+            <div class="skill">
+              <div class="outer">
+                <div class="inner">
+                  <div id="number">40%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle cx="40" cy="40" r="35" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="result-card flex justify-between items-center bg-violet-300 p-5 rounded-lg"
+        >
+          <div class="text-result__content cursor-pointer">
+            <h1 class="result-card__tile uppercase text-[1.3rem] font-[700]">
+              front-end
+            </h1>
+            <p class="mt-[0.5rem] text-[1.2rem] tracking-tight">
+              Algoritmlar, muammolarga yechim topish, intizom
+            </p>
+          </div>
+          <div class="circle-percent">
+            <div class="skill">
+              <div class="outer">
+                <div class="inner">
+                  <div id="number">23%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle cx="40" cy="40" r="35" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="result-card flex justify-between items-center bg-violet-300 p-5 rounded-lg"
+        >
+          <div class="text-result__content cursor-pointer">
+            <h1 class="result-card__tile uppercase text-[1.3rem] font-[700]">
+              SMM
+            </h1>
+            <p class="mt-[0.5rem] text-[1.2rem] tracking-tight">
+              Algoritmlar, muammolarga yechim topish, intizom
+            </p>
+          </div>
+          <div class="circle-percent">
+            <div class="skill">
+              <div class="outer">
+                <div class="inner">
+                  <div id="number">27%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle cx="40" cy="40" r="35" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const circles = document.querySelectorAll(
+          ".circle-percent .skill circle"
+        );
+
+        circles.forEach((circle) => {
+          const percentValue = parseFloat(
+            circle.closest(".circle-percent").querySelector("#number").innerText
+          );
+          const radius = circle.getAttribute("r");
+          const circumference = Math.PI * (radius * 2);
+          const strokeDashValue = (circumference * percentValue) / 100;
+
+          circle.style.strokeDasharray = `${strokeDashValue} ${
+            circumference - strokeDashValue
+          }`;
+          circle.style.strokeDashoffset = circumference - strokeDashValue;
+        });
+      });
+    </script>
+
+    <!-- Tailwind  -->
+    <script src="/assets/frameworks/tailwind.js"></script>
+    <!-- JS Scripts -->
+    <script src="/assets/js/script.js"></script>
+  </body>
 </html>

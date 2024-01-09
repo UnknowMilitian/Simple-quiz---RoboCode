@@ -18,7 +18,8 @@ body {
   min-height: 100dvh;
 }
 
-.quiz-cards {
+.quiz-cards,
+.result-cards {
   background: rgba(162, 90, 254, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -74,3 +75,53 @@ body {
   background-color: #84cc16;
   /* Add any additional hover or focus styles */
 }
+
+/* Results Css */
+.circle-percent .skill {
+  width: 5rem;
+  height: 5rem;
+  /* background: cadetblue; */
+  position: relative;
+}
+
+.circle-percent .skill .outer {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: 1px solid beige;
+  padding: 0.22rem;
+}
+
+.circle-percent .skill .inner {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px 0.5px 0px rgba(255, 255, 255, 1),
+    -0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.circle-percent .skill .inner #number {
+  font-weight: 700;
+  color: #555;
+}
+
+.circle-percent .skill svg {
+  height: 5.5rem;
+  width: 5.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle-percent .skill circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 5px;
+}
+
+/* /Results Css */
