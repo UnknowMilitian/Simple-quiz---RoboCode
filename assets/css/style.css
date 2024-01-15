@@ -94,51 +94,68 @@ body {
 }
 
 /* Results Css */
-.circle-percent .skill {
-  width: 5rem;
-  height: 5rem;
-  /* background: cadetblue; */
+.progress-container .progress {
   position: relative;
-}
-
-.circle-percent .skill .outer {
-  height: 5rem;
-  width: 5rem;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 1px solid beige;
-  padding: 0.22rem;
+  color: white;
+  background: #a1a1a1
+    linear-gradient(to right, transparent 50%, #6f00ff 50%, #6f00ff 0%);
 }
 
-.circle-percent .skill .inner {
-  width: 4.5rem;
-  height: 4.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-    -0.5px 0.5px 0px rgba(255, 255, 255, 1),
-    -0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.5);
-}
-
-.circle-percent .skill .inner #number {
-  font-weight: 700;
-  color: #555;
-}
-
-.circle-percent .skill svg {
-  height: 5.5rem;
-  width: 5.5rem;
+.progress-container .progress h3 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  z-index: 1;
+  font-weight: 500;
 }
 
-.circle-percent .skill circle {
-  fill: none;
-  stroke: url(#GradientColor);
-  stroke-width: 5px;
+.progress-container .progress h3 span {
+  font-size: 0.65rem;
+}
+
+.progress-container .progress h4 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-weight: 500;
+  color: rgb(31, 115, 31);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.progress-container .progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+
+.progress-container .progress::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
+.progress-container .progress::before {
+  background: #6f00ff;
+  transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+}
+
+/* If value is less than 50% then */
+.progress-container .progress.less::before {
+  background: #444;
+  transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
 }
 
 /* /Results Css */

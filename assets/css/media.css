@@ -2,4 +2,18 @@
   body {
     min-height: 96vh;
   }
+
+  .progress-container .progress {
+    width: 70px;
+    height: 70px;
+  }
+
+  .progress-container .progress h3 {
+    font-size: 1rem;
+  }
+
+  .progress-container .progress h4 {
+    font-size: 0.6rem;
+    font-weight: 700;
+  }
 }
